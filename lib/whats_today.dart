@@ -110,7 +110,15 @@ class whats_today extends ConsumerWidget  {
                         currentTime: ref.watch(myDateTimeProvider.state).state, locale: LocaleType.jp
                     );
                   },
-                  label: Text(pickerdate,style: TextStyle(fontSize:25)),
+                  label: Text(pickerdate,style: const TextStyle(fontSize:25)),
+                ),
+                SizedBox(
+                  width: 300,
+                  child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 20),shape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(10.0)),primary: Colors.purple[800]),
+                            onPressed: () {},
+                            child: const Text('何の日か見る'),
+                          )
                 ),
               ]),
         ),
